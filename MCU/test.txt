@@ -1,0 +1,1815 @@
+
+Instruments 
+
+
+2019-06-30 23:29:16 226: 第86行: type:1, pts:1561895684221045 length:103595 间隔:-12872.225586
+2019-06-30 23:29:16 233: 第86行: type:0, pts:1561895684261045 length:25001 间隔:-12872.232422
+2019-06-30 23:29:16 234: 第96行: later:0
+2019-06-30 23:29:16 346: 第86行: type:0, pts:1561895684301045 length:25106 间隔:-12872.346680
+2019-06-30 23:29:16 349: 第96行: later:0
+2019-06-30 23:29:16 394: 第86行: type:0, pts:1561895684341045 length:25350 间隔:-12872.394531
+2019-06-30 23:29:16 396: 第96行: later:0
+2019-06-30 23:29:16 539: 第86行: type:0, pts:1561895684381046 length:24905 间隔:-12872.539062
+
+
+
+2019-06-30 23:22:23 398: 第83行: type:1, pts:1561895932223267 length:105188 间隔:-12211.397461
+2019-06-30 23:22:23 419: 第83行: type:0, pts:1561895932263268 length:24887 间隔:-12211.418945
+2019-06-30 23:22:23 437: 第83行: type:0, pts:1561895932303265 length:25074 间隔:-12211.437500
+2019-06-30 23:22:23 454: 第83行: type:0, pts:1561895932343265 length:24823 间隔:-12211.454102
+2019-06-30 23:22:23 469: 第83行: type:0, pts:1561895932383269 length:25264 间隔:-12211.468750
+2019-06-30 23:22:23 480: 第83行: type:0, pts:1561895932423263 length:25104 间隔:-12211.480469
+2019-06-30 23:22:23 496: 第83行: type:0, pts:1561895932463268 length:24778 间隔:-12211.496094
+
+
+
+Excase,because it involves patents, we can't send email equipment to Apple headquarters.
+Here is the video, which show how to control the device
+https://www.youtube.com/watch?v=iKDLqHuq3yc
+
+
+
+15618028417
+
+1561774073.0266609
+
+1561802612.388291
+1561773938.779228
+
+23232323 232323b3 c7f6f9c8 8b050003 00000001 000000cc
+
+
+ if (FrameIsVedio(info))
+        {
+            [self.videoData appendData:data];
+        }
+        else
+        {
+            [self.audioData appendData:data];
+        }
+        
+        NSUInteger currentLength = self.videoData.length + self.audioData.length;
+        if (self.size <= currentLength)
+        {
+            NSLog(@"数据接收完了，开始播放")
+            
+        }
+
+
+2019-06-20 13:30:34 668: DDPlayController.m 第65行: 收到一帧：1
+2019-06-20 13:30:35 243: DDPlayController.m 第65行: 收到一帧：1
+2019-06-20 13:30:36 260: DDPlayController.m 第65行: 收到一帧：1
+2019-06-20 13:30:37 261: DDPlayController.m 第65行: 收到一帧：1
+2019-06-20 13:30:38 222: DDPlayController.m 第65行: 收到一帧：1
+
+
+
+---
+
+
+1,历史记录播放，下载
+2,STA模式连接设备
+3,tabar的全屏后显示异常
+4,
+5,
+6,
+7,
+8,
+
+
+
+IO报警OK
+
+
+
+<IOSET version="1.0.0.0">
+    <input>
+        
+    </input>
+    <output>
+        
+    </output>
+</IOSET>
+
+
+0:关闭,1:紧急,2:前门,3:中门,4:后门,5:近光 6:远光,9:右转,10:左转,11:刹车,12:倒车,13:保留,17:主动对讲,31:自定义
+
+// 这三个没有
+14,前门关 15,中门关16,后门关
+
+name    enable
+OFF			0    关闭   
+Panic		1    紧急
+F-door		2    前门 
+M-door		3    中门
+B-door		4    后门
+Blues		5    近光
+Siren		6    远光
+L-Turn		9    右转
+R-Turn		10   左转
+Brake   	11   刹车
+Back   	 	12   倒车
+Reserve1	13   保留
+Talk		17   主动对讲
+
+
+
+typedef enum{ 
+ PARAM_TYPE_TDBASIC = 0,//JTBaseSet_t		0
+ PARAM_TYPE_OSD,//OsdSet_t					1  	Cmd_SysstatusGet
+ PARAM_TYPE_STORE,//StoreSet_t				2   Cmd_StoreGet
+ PARAM_TYPE_SERVER,//ServerSet_t			3   Cmd_ServerGet 
+ PARAM_TYPE_DIALUP,//DialupSet_t			4 	Cmd_DialupGet
+ PARAM_TYPE_LOCAL,//LocalSet_t				5   Cmd_LocalGet
+ PARAM_TYPE_CLOCK,//ClockSet_t				6   Cmd_ClockGet
+ PARAM_TYPE_RSBASE,//RsBaseSet_t			7   Cmd_RSBaseGet
+ PARAM_TYPE_POWER,//PowerSet_t				8   Cmd_PowerGet
+ PARAM_TYPE_VIDEOOUT,//VideoOut_t           9   未使用
+ PARAM_TYPE_IO,//IOSet_t					10  IO待验证
+ PARAM_TYPE_UPGRADE,//UpgradeSet_t			11  Cmd_UpgradeGet
+ PARAM_TYPE_SPEED,//SpeedSet_t				12  Cmd_SpeedGet
+ PARAM_TYPE_GSENSOR,//GsensorSet_t			13  Cmd_GSensorGet
+ PARAM_TYPE_VOLTAGE,//VoltageSet_t			14  Cmd_VoltageGet
+ PARAM_TYPE_TEMP,//TempSet_t				15  未使用
+ PARAM_TYPE_WIFI,//WifiSet_t				16  Cmd_WIFIGet
+ PARAM_TYPE_DISPLAY,//DisplaySet_t			17  未使用
+ PARAM_TYPE_PTZ,//PtzSet_t					18 	未使用 
+ PARAM_TYPE_DST,//DstSet_t					19  未使用	
+ PARAM_TYPE_MOTIONDETECT,//MotionDetectionSet_t   20   未使用	
+ PARAM_TYPE_RECORD,//RecordSet_t			21  Cmd_RecordGet
+ PARAM_TYPE_LANGUAGE,//LanguageSet_t		22  Cmd_LanguageGet
+ PARAM_TYPE_VLOSS,//VideoLostAlm_t			23  Cmd_VideoLostAlmGet(未使用)
+ PARAM_TYPE_DISKALARM,//DiskAbnormalAlm_t	24  Cmd_DiskAbnormalGet(未使用)
+}PARAM_TYPE_E;
+
+
+
+1,底部tabar选中状态下高亮状态显示异常
+
+
+
+1，关键帧命令，发送后连接断开.
+2，IO报警的获取命令和设置命令.
+3，观看历史记录的命令，下载历史记录的命令发送后连接断开
+4，在状态页有时发送获取状态的指令没有回复，偶然出现，
+5，更新MDVR，上传报告的接口
+6，
+
+
+
+
+<LOCAL version="1.0.0.0">
+    <ip>192.168.001.010</ip>
+    <mask>255.255.255.000</mask>
+    <gw>192.168.001.001</gw>
+    <dns>113.068.119.068</dns>
+    <mac>113.68.119.68</mac>
+    <LinkType>2</LinkType>
+</LOCAL>
+
+
+<GSENSOR version="1.0.0.2">
+    <switch>0</switch>
+    <unit>0</unit>
+    <brakedirect>0</brakedirect>
+    <correctx>0</correctx>
+    <correcty>0</correcty>
+    <correctz>0</correctz>
+    <xalarm>
+        <enable>0</enable>
+        <limit>80</limit>
+        <delay>1</delay>
+        <record>0</record>
+        <holdtime>5</holdtime>
+        <linkage>0</linkage>
+    </xalarm>
+    <yalarm>
+        <enable>0</enable>
+        <limit>80</limit>
+        <delay>1</delay>
+        <record>0</record>
+        <holdtime>5</holdtime>
+        <linkage>0</linkage>
+    </yalarm>
+    <zalarm>
+        <enable>0</enable>
+        <limit>80</limit>
+        <delay>1</delay>
+        <record>0</record>
+        <holdtime>5</holdtime>
+        <linkage>0</linkage>
+    </zalarm>
+    <hitalarm>
+        <enable>1</enable>
+        <limit>250</limit>
+        <delay>1</delay>
+        <record>1</record>
+        <holdtime>5</holdtime>
+        <linkage>0</linkage>
+    </hitalarm>
+    <tiltalarm>
+        <enable>0</enable>
+        <limit>800</limit>
+        <delay>1</delay>
+        <record>0</record>
+        <holdtime>5</holdtime>
+        <linkage>0</linkage>
+    </tiltalarm>
+</GSENSOR>
+
+
+
+
+
+
+<SPEED version="1.0.0.1">
+    <source>0</source>
+    <unit>0</unit>
+    <pulse>10</pulse>
+    <posmode>0</posmode>
+    <stopalarm>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>128</linkage>
+    </stopalarm>
+    <lowprealarm>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>238</linkage>
+    </lowprealarm>
+    <lowalarm>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>0</linkage>
+    </lowalarm>
+    <highprealarm>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>0</linkage>
+    </highprealarm>
+    <highalarm>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>0</linkage>
+    </highalarm>
+    <harshbraking>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>0</linkage>
+    </harshbraking>
+    <harshacc>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>0</linkage>
+    </harshacc>
+</SPEED>
+
+
+
+<LOCAL version="1.0.0.0">
+    <ip>192.168.001.010</ip>
+    <mask>255.255.255.000</mask>
+    <gw>192.168.001.001</gw>
+    <dns>113.068.119.068</dns>
+    <mac>113.68.119.68</mac>
+    <LinkType>2</LinkType>
+</LOCAL>
+
+
+
+时区参数设置不正确   OK
+夏令时无法设置           没找到id+type
+校时ntp服务器端口无法设置  没发现异常
+io报警无法获取和设置      没找到id+type
+
+
+
+
+
+以下接口可根据服务器自助选择http/https/ftp方式实现
+
+1，上传图像接口
+参数：imageData 图片二进制数据，图片大小限制在2M以内。
+图像名称：T-BOX_iOS_索引_时间戳.png，/ T-BOX_Android_索引_时间戳.png
+索引为本次上传反馈的图片索引，0-4
+示例：
+T-BOX_iOS_0_1560389165.png
+T-BOX_iOS_1_1560389175.png
+T-BOX_iOS_2_1560389185.png
+T-BOX_iOS_3_1560389195.png
+T-BOX_iOS_4_1560389205.png
+
+2，上传反馈接口.Post方式，传输类型为appliction/json
+cName:String  		长度不超过128个字符
+cEmail:String 		长度不超过128个字符
+cProductType:String 长度不超过128个字符
+eQuestion:String    长度不超过500个字符	
+cImageList:Array    图片的名称数组，关联最多5张图片
+示例 jSon
+{
+	"cName": "深圳市合众世纪科技有限公司",
+	"cEmail": "111@qq.com",
+	"cProductType": "aaa",
+	"eQuestion": "不会报警",
+	"cImageList": [
+		"T-BOX_iOS_0_1560389165.png",
+		"T-BOX_iOS_1_1560389175.png",
+		"T-BOX_iOS_2_1560389185.png",
+		"T-BOX_iOS_3_1560389195.png",
+		"T-BOX_iOS_4_1560389205.png"
+	]
+}
+
+3，获取最新的MDVR版本
+请求参数
+cPlatform:String (cPlatform参数选项有 iOS / Android)
+返回参数
+cVersionCode:String 最新的版号（App会对比现在设备）
+返回参数示例
+{
+	"nVersion":"T19022701.2521"
+}
+
+4, 获取指定的MDVR版本
+请求参数
+cPlatform:String (cPlatform参数选项有 iOS / Android)
+cVersion:String 
+请求参数示例
+{
+	"cPlatform":"iOS",
+	"cVersion":"T19022701.2521"
+}
+返回
+二进制数据data
+
+
+
+
+
+
+
+
+
+
+
+
+
+时区参数设置不正确			没发现异常
+夏令时无法设置           没找到id+type
+校时ntp服务器端口无法设置  没发现异常
+io报警无法获取和设置      没找到id+type
+
+
+Conga 3290 3490 3690
+iOS
+https://www.pgyer.com/yszV
+Android
+https://www.pgyer.com/QgNN
+
+
+
+tao@ainiyishi.com
+Ghostwin*963.-+
+
+
+将MDVR与显示器连接，按下遥控器的INFO键，顺序拍摄设备信息页面内容。
+
+
+未完成逻辑（20190609）
+1,多通道视频直播，一个通道播放时，发送另一个通道开始没有反应。同时发送5个通道的开始视频，只有通道1视频数据回来
+2,请求关键帧命令发送后，设备断开连接，没有指令回复。
+3,历史页面，选中一个视频发送下载指令，链接断开，没有指令回复
+4,时间设置中时区设置没有id和type，无法设置
+5,拉取历史记录的时候，有时候返回的时间戳比当前时间还晚
+6,报告页面接口
+7,终端控制页面中，”检查MDVR软件更新“和“升级MDVR”，设备升级方案待定
+8,首页的切换设备方案待定
+
+
+
+
+
+
+    1560036632,
+    1560034889,
+    1560070780,
+    1560038376,
+    1560032397,
+    1560038874,
+    1560040371,
+    1560017775,
+    1560031649,
+    1560036382,
+    1560034141,
+    1560018006,
+    1560037628,
+    1560032896,
+    1560037629,
+    1560070502,
+    1560034640,
+    1560040870,
+    1560036881,
+    1560018505,
+    1560035635,
+    1560040871,
+    1560035138,
+    1560037379,
+    1560031400,
+    1560031898,
+    1560018255,
+    1560034391,
+    1560037878,
+    1560039124,
+    1560033145,
+    1560035386,
+    1560039622,
+    1560033643,
+    1560018754,
+    1560035884,
+    1560037130,
+    1560035387,
+    1560031151,
+    1560041120,
+    1560035885,
+    1560041121,
+    1560030901,
+    1560032147,
+    1560039373,
+    1560033394,
+    1560070531,
+    1560038127,
+    1560040121,
+    1560030902,
+    1560033892,
+    1560038625,
+    1560032646,
+    1560039872,
+    1560036133,
+    1560033893,
+    1560037380,
+    1560019004,
+    1560040621
+
+
+
+终端控制
+
+
+ACCOUNTINF
+DiskAbnormal
+RSBASE
+PTZ
+MOTIONDETECT
+
+VideoLostAlm
+
+Cmd_DiskAbnormalGet
+
+
+1，状态页的GPS定位状态
+   切换设备功能
+2，直播页面的 多通道视频
+3，历史页面的下载功能
+4，下载页面的数据
+5，注册接口什么时候调用
+
+
+static dispatch_queue_t queue = dispatch_queue_create("handleCmdData", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_barrier_async(queue  _Nonnull queue, ^{
+        
+    })
+    
+
+DISPATCH_QUQUQ_CONCURRENT
+
+
+
+
+使用验证码登陆后以后不能用账号密码登陆了，这个他们要求下个版本修复
+这个逻辑下个版本要改一下
+
+
+2，
+
+
+
+        self.chn  = @"1";
+        self.type = @"2";
+        self.link = @"1";
+        self.addr = @"192.168.1.100";
+        self.port = @"5677";
+        self.searchDate = [NSDate date];
+
+NSString *txt = [NSString stringWithFormat:@"<message><head><version>1.0.0.0</version><id>1003</id></head><body><chn>%@</chn><type>%@</type><starttime>%@</starttime><endtime>%@</endtime><link>%@</link><addr>%@</addr><port>%@</port></body></message>", self.chn, self.type, @"0", @"86399", self.link, self.addr, self.port];
+
+
+loc(@"设备号"),
+                        loc(@"程序版本"),
+                        loc(@"设备电压"),
+                        loc(@"GPS定位状态"),
+                        loc(@"磁盘状态"),
+                        loc(@"3G/4G状态"),
+                        loc(@"G-sensor状态"),
+
+
+
+btn_border_normal
+btn_border_selected
+
+
+<GSENSOR version="1.0.0.2">
+    <switch>0</switch>
+    <unit>0</unit>
+    <brakedirect>0</brakedirect>
+    <correctx>0</correctx>
+    <correcty>0</correcty>
+    <correctz>0</correctz>
+    <xalarm>
+        <enable>0</enable>
+        <limit>80</limit>
+        <delay>1</delay>
+        <record>0</record>
+        <holdtime>5</holdtime>
+        <linkage>0</linkage>
+    </xalarm>
+    <yalarm>
+        <enable>0</enable>
+        <limit>80</limit>
+        <delay>1</delay>
+        <record>0</record>
+        <holdtime>5</holdtime>
+        <linkage>0</linkage>
+    </yalarm>
+    <zalarm>
+        <enable>0</enable>
+        <limit>80</limit>
+        <delay>1</delay>
+        <record>0</record>
+        <holdtime>5</holdtime>
+        <linkage>0</linkage>
+    </zalarm>
+    <hitalarm>
+        <enable>1</enable>
+        <limit>250</limit>
+        <delay>1</delay>
+        <record>1</record>
+        <holdtime>5</holdtime>
+        <linkage>0</linkage>
+    </hitalarm>
+    <tiltalarm>
+        <enable>0</enable>
+        <limit>800</limit>
+        <delay>1</delay>
+        <record>0</record>
+        <holdtime>5</holdtime>
+        <linkage>0</linkage>
+    </tiltalarm>
+</GSENSOR>
+
+
+<SPEED version="1.0.0.1">
+    <source>0</source>
+    <unit>0</unit>
+    <pulse>10</pulse>
+    <posmode>0</posmode>
+    <stopalarm>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>128</linkage>
+    </stopalarm>
+    <lowprealarm>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>238</linkage>
+    </lowprealarm>
+    <lowalarm>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>0</linkage>
+    </lowalarm>
+    <highprealarm>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>0</linkage>
+    </highprealarm>
+    <highalarm>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>0</linkage>
+    </highalarm>
+    <harshbraking>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>0</linkage>
+    </harshbraking>
+    <harshacc>
+			<enable>0</enable>
+			<limit>0</limit>
+			<delay>0</delay>
+			<record>0</record>
+			<holdtime>0</holdtime>
+        <linkage>0</linkage>
+    </harshacc>
+</SPEED>
+
+
+
+
+self.version = [element attributeForName:@"version"].stringValue;
+[self setDefaultValue];
+
+
+<LOCAL version="1.0.0.0">
+    <ip>192.168.001.010</ip>
+    <mask>255.255.255.000</mask>
+    <gw>192.168.001.001</gw>
+    <dns>113.068.119.068</dns>
+    <mac>113.68.119.68</mac>
+    <LinkType>2</LinkType>
+</LOCAL>
+
+
+
+<message>
+    <head>
+        <version>1.1.1.1</version>
+        <id>1017</id>
+    </head>
+    <body>
+        <type>21</type>
+        <xmlbody>
+            <RECORD version="1.0.0.5">
+                <SysNorm>1</SysNorm>
+                <RecMode>0</RecMode>
+                <AutoCover>1</AutoCover>
+                <AOVolume>1</AOVolume>
+                <AudioType>1</AudioType>
+                <PackTime>0</PackTime>
+                <CameraType>11</CameraType>
+                <RecTimers>
+                    <time0>
+                        <start1>0</start1>
+                        <end1>86399</end1>
+                        <start2>0</start2>
+                        <end2>0</end2>
+                    </time0>
+                    <time1>
+                        <start1>0</start1>
+                        <end1>86399</end1>
+                        <start2>0</start2>
+                        <end2>0</end2>
+                    </time1>
+                    <time2>
+                        <start1>0</start1>
+                        <end1>86399</end1>
+                        <start2>0</start2>
+                        <end2>0</end2>
+                    </time2>
+                    <time3>
+                        <start1>0</start1>
+                        <end1>86399</end1>
+                        <start2>0</start2>
+                        <end2>0</end2>
+                    </time3>
+                    <time4>
+                        <start1>0</start1>
+                        <end1>86399</end1>
+                        <start2>0</start2>
+                        <end2>0</end2>
+                    </time4>
+                    <time5>
+                        <start1>0</start1>
+                        <end1>86399</end1>
+                        <start2>0</start2>
+                        <end2>0</end2>
+                    </time5>
+                    <time6>
+                        <start1>0</start1>
+                        <end1>86399</end1>
+                        <start2>0</start2>
+                        <end2>0</end2>
+                    </time6>
+                    <time7>
+                        <start1>0</start1>
+                        <end1>86399</end1>
+                        <start2>0</start2>
+                        <end2>0</end2>
+                    </time7>
+                </RecTimers>
+                <chn0>
+                    <isRec>1</isRec>
+                    <FrameRate>25</FrameRate>
+                    <Resolution>0</Resolution>
+                    <Quality>0</Quality>
+                    <HaveAudio>1</HaveAudio>
+                    <Bitrate>4096</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>25</Gop>
+                    <Mirror>2</Mirror>
+                </chn0>
+                <chn1>
+                    <isRec>1</isRec>
+                    <FrameRate>25</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>4096</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>25</Gop>
+                    <Mirror>2</Mirror>
+                </chn1>
+                <chn2>
+                    <isRec>1</isRec>
+                    <FrameRate>20</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>4096</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>25</Gop>
+                    <Mirror>0</Mirror>
+                </chn2>
+                <chn3>
+                    <isRec>1</isRec>
+                    <FrameRate>20</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>4096</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>25</Gop>
+                    <Mirror>0</Mirror>
+                </chn3>
+                <chn4>
+                    <isRec>0</isRec>
+                    <FrameRate>15</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>2048</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>25</Gop>
+                    <Mirror>0</Mirror>
+                </chn4>
+                <chn5>
+                    <isRec>0</isRec>
+                    <FrameRate>15</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>2048</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>25</Gop>
+                    <Mirror>0</Mirror>
+                </chn5>
+                <chn6>
+                    <isRec>0</isRec>
+                    <FrameRate>15</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>2048</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>25</Gop>
+                    <Mirror>0</Mirror>
+                </chn6>
+                <chn7>
+                    <isRec>0</isRec>
+                    <FrameRate>15</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>2048</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>25</Gop>
+                    <Mirror>0</Mirror>
+                </chn7>
+                <chn8>
+                    <isRec>1</isRec>
+                    <FrameRate>1</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                    <Mirror>0</Mirror>
+                </chn8>
+                <chn9>
+                    <isRec>1</isRec>
+                    <FrameRate>1</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                    <Mirror>0</Mirror>
+                </chn9>
+                <chn10>
+                    <isRec>1</isRec>
+                    <FrameRate>1</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                    <Mirror>0</Mirror>
+                </chn10>
+                <chn11>
+                    <isRec>1</isRec>
+                    <FrameRate>1</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                    <Mirror>0</Mirror>
+                </chn11>
+                <chn12>
+                    <isRec>1</isRec>
+                    <FrameRate>1</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                    <Mirror>0</Mirror>
+                </chn12>
+                <chn13>
+                    <isRec>1</isRec>
+                    <FrameRate>1</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                    <Mirror>0</Mirror>
+                </chn13>
+                <chn14>
+                    <isRec>1</isRec>
+                    <FrameRate>1</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                    <Mirror>0</Mirror>
+                </chn14>
+                <chn15>
+                    <isRec>1</isRec>
+                    <FrameRate>1</FrameRate>
+                    <Resolution>1</Resolution>
+                    <Quality>1</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                    <Mirror>0</Mirror>
+                </chn15>
+                <chn0>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn0>
+                <chn1>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn1>
+                <chn2>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn2>
+                <chn3>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn3>
+                <chn4>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn4>
+                <chn5>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn5>
+                <chn6>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn6>
+                <chn7>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn7>
+                <chn8>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn8>
+                <chn9>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn9>
+                <chn10>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn10>
+                <chn11>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn11>
+                <chn12>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn12>
+                <chn13>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn13>
+                <chn14>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn14>
+                <chn15>
+                    <isRec>1</isRec>
+                    <FrameRate>10</FrameRate>
+                    <Resolution>3</Resolution>
+                    <Quality>2</Quality>
+                    <HaveAudio>0</HaveAudio>
+                    <Bitrate>1</Bitrate>
+                    <PicLevel>1</PicLevel>
+                    <Gop>1</Gop>
+                </chn15>
+                <IPCChn>
+                    <chn0>
+                        <isOpen>0</isOpen>
+                        <DevType>1</DevType>
+                        <Protocol>1</Protocol>
+                        <ChlNo>1</ChlNo>
+                        <CameraPort>1</CameraPort>
+                        <CameraIP>1</CameraIP>
+                        <UserName>1</UserName>
+                        <UserPwd>1</UserPwd>
+                        <ipcAddr>1</ipcAddr>
+                        <rtspUrl_0>1</rtspUrl_0>
+                        <rtspUrl_1>1</rtspUrl_1>
+                    </chn0>
+                    <chn1>
+                        <isOpen>0</isOpen>
+                        <DevType>1</DevType>
+                        <Protocol>1</Protocol>
+                        <ChlNo>1</ChlNo>
+                        <CameraPort>1</CameraPort>
+                        <CameraIP>1</CameraIP>
+                        <UserName>1</UserName>
+                        <UserPwd>1</UserPwd>
+                        <ipcAddr>1</ipcAddr>
+                        <rtspUrl_0>1</rtspUrl_0>
+                        <rtspUrl_1>1</rtspUrl_1>
+                    </chn1>
+                    <chn2>
+                        <isOpen>0</isOpen>
+                        <DevType>1</DevType>
+                        <Protocol>1</Protocol>
+                        <ChlNo>1</ChlNo>
+                        <CameraPort>1</CameraPort>
+                        <CameraIP>1</CameraIP>
+                        <UserName>1</UserName>
+                        <UserPwd>1</UserPwd>
+                        <ipcAddr>1</ipcAddr>
+                        <rtspUrl_0>1</rtspUrl_0>
+                        <rtspUrl_1>1</rtspUrl_1>
+                    </chn2>
+                    <chn3>
+                        <isOpen>0</isOpen>
+                        <DevType>1</DevType>
+                        <Protocol>1</Protocol>
+                        <ChlNo>1</ChlNo>
+                        <CameraPort>1</CameraPort>
+                        <CameraIP>1</CameraIP>
+                        <UserName>1</UserName>
+                        <UserPwd>1</UserPwd>
+                        <ipcAddr>1</ipcAddr>
+                        <rtspUrl_0>1</rtspUrl_0>
+                        <rtspUrl_1>1</rtspUrl_1>
+                    </chn3>
+                    <chn4>
+                        <isOpen>1</isOpen>
+                        <DevType>1</DevType>
+                        <Protocol>1</Protocol>
+                        <ChlNo>1</ChlNo>
+                        <CameraPort>1</CameraPort>
+                        <CameraIP>1</CameraIP>
+                        <UserName>1</UserName>
+                        <UserPwd>1</UserPwd>
+                        <ipcAddr>1</ipcAddr>
+                        <rtspUrl_0>1</rtspUrl_0>
+                        <rtspUrl_1>1</rtspUrl_1>
+                    </chn4>
+                    <chn5>
+                        <isOpen>1</isOpen>
+                        <DevType>1</DevType>
+                        <Protocol>1</Protocol>
+                        <ChlNo>1</ChlNo>
+                        <CameraPort>1</CameraPort>
+                        <CameraIP>1</CameraIP>
+                        <UserName>1</UserName>
+                        <UserPwd>1</UserPwd>
+                        <ipcAddr>1</ipcAddr>
+                        <rtspUrl_0>1</rtspUrl_0>
+                        <rtspUrl_1>1</rtspUrl_1>
+                    </chn5>
+                    <chn6>
+                        <isOpen>1</isOpen>
+                        <DevType>1</DevType>
+                        <Protocol>1</Protocol>
+                        <ChlNo>1</ChlNo>
+                        <CameraPort>1</CameraPort>
+                        <CameraIP>1</CameraIP>
+                        <UserName>1</UserName>
+                        <UserPwd>1</UserPwd>
+                        <ipcAddr>1</ipcAddr>
+                        <rtspUrl_0>1</rtspUrl_0>
+                        <rtspUrl_1>1</rtspUrl_1>
+                    </chn6>
+                    <chn7>
+                        <isOpen>1</isOpen>
+                        <DevType>1</DevType>
+                        <Protocol>1</Protocol>
+                        <ChlNo>1</ChlNo>
+                        <CameraPort>1</CameraPort>
+                        <CameraIP>1</CameraIP>
+                        <UserName>1</UserName>
+                        <UserPwd>1</UserPwd>
+                        <ipcAddr>1</ipcAddr>
+                        <rtspUrl_0>1</rtspUrl_0>
+                        <rtspUrl_1>1</rtspUrl_1>
+                    </chn7>
+                </IPCChn>
+            </RECORD>
+        </xmlbody>
+    </body>
+</message>
+
+
+    Cmd_AccountInfoSet = 100282,
+    Cmd_DialupGet = 100041,
+    Cmd_LOCALSet = 100052,
+     = 100032,
+    Cmd_UpgradeSet = 100112,
+    
+    Cmd_WIFIGet = 100161,
+    Cmd_WIFISet = 100162,
+
+    Cmd_DiskAbnormalGet = 100241,
+    Cmd_DiskAbnormalSet = 100242,
+    
+//    Cmd_RebootGet = 100041,
+//    Cmd_RebootSet = 100042,
+    
+    Cmd_SpeedGet = 100121,
+    Cmd_SpeedSet = 100122,
+    
+    Cmd_VOLTAGEGet = 100141,
+    Cmd_VOLTAGESet = 100142,
+    
+    Cmd_RSBaseGet = 100071,
+    Cmd_RSBaseSet = 100072,
+    
+    Cmd_VideoLostAlmGet = 100231,
+    Cmd_VideoLostAlmSet = 100232,
+    
+    Cmd_PTZGet = 100181,
+    Cmd_PTZSet = 100182,
+    
+    Cmd_MotinonDeteGet = 100201,
+    Cmd_MotinonDeteSet = 100202,
+    
+    Cmd_GSensorGet = 100131,
+    Cmd_GSensorSet = 100132,
+    
+    Cmd_STOREGet = 100021,
+    Cmd_STORESet = 100022,
+    
+    Cmd_OSDGet = 100011,
+    Cmd_OSDSet = 100012,
+
+收到cmd data length:4344
+收到cmd data length:4344
+收到cmd data length:5792
+收到cmd data length:499
+
+<RECORD version="1.0.0.5">
+    <SysNorm>0</SysNorm>
+    <RecMode>0</RecMode>
+    <AutoCover>1</AutoCover>
+    <AOVolume>1</AOVolume>
+    <AudioType>1</AudioType>
+    <PackTime>0</PackTime>
+    <CameraType>18</CameraType>
+    <RecTimers>
+        <time0>
+            <start1>0</start1>
+            <end1>86399</end1>
+            <start2>0</start2>
+            <end2>0</end2>
+        </time0>
+        <time1>
+            <start1>0</start1>
+            <end1>86399</end1>
+            <start2>0</start2>
+            <end2>0</end2>
+        </time1>
+        <time2>
+            <start1>0</start1>
+            <end1>86399</end1>
+            <start2>0</start2>
+            <end2>0</end2>
+        </time2>
+        <time3>
+            <start1>0</start1>
+            <end1>86399</end1>
+            <start2>0</start2>
+            <end2>0</end2>
+        </time3>
+        <time4>
+            <start1>0</start1>
+            <end1>86399</end1>
+            <start2>0</start2>
+            <end2>0</end2>
+        </time4>
+        <time5>
+            <start1>0</start1>
+            <end1>86399</end1>
+            <start2>0</start2>
+            <end2>0</end2>
+        </time5>
+        <time6>
+            <start1>0</start1>
+            <end1>86399</end1>
+            <start2>0</start2>
+            <end2>0</end2>
+        </time6>
+        <time7>
+            <start1>0</start1>
+            <end1>86399</end1>
+            <start2>0</start2>
+            <end2>0</end2>
+        </time7>
+    </RecTimers>
+    <MainChn>
+        <chn0>
+            <isRec>1</isRec>
+            <FrameRate>25</FrameRate>
+            <Resolution>0</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>1</HaveAudio>
+            <Bitrate>4096</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>25</Gop>
+            <Mirror>2</Mirror>
+        </chn0>
+        <chn1>
+            <isRec>1</isRec>
+            <FrameRate>25</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>4096</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>25</Gop>
+            <Mirror>2</Mirror>
+        </chn1>
+        <chn2>
+            <isRec>1</isRec>
+            <FrameRate>20</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>4096</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>25</Gop>
+            <Mirror>0</Mirror>
+        </chn2>
+        <chn3>
+            <isRec>1</isRec>
+            <FrameRate>20</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>4096</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>25</Gop>
+            <Mirror>0</Mirror>
+        </chn3>
+        <chn4>
+            <isRec>0</isRec>
+            <FrameRate>15</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>2048</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>25</Gop>
+            <Mirror>0</Mirror>
+        </chn4>
+        <chn5>
+            <isRec>0</isRec>
+            <FrameRate>15</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>2048</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>25</Gop>
+            <Mirror>0</Mirror>
+        </chn5>
+        <chn6>
+            <isRec>0</isRec>
+            <FrameRate>15</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>2048</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>25</Gop>
+            <Mirror>0</Mirror>
+        </chn6>
+        <chn7>
+            <isRec>0</isRec>
+            <FrameRate>15</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>2048</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>25</Gop>
+            <Mirror>0</Mirror>
+        </chn7>
+        <chn8>
+            <isRec>1</isRec>
+            <FrameRate>1</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+            <Mirror>0</Mirror>
+        </chn8>
+        <chn9>
+            <isRec>1</isRec>
+            <FrameRate>1</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+            <Mirror>0</Mirror>
+        </chn9>
+        <chn10>
+            <isRec>1</isRec>
+            <FrameRate>1</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+            <Mirror>0</Mirror>
+        </chn10>
+        <chn11>
+            <isRec>1</isRec>
+            <FrameRate>1</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+            <Mirror>0</Mirror>
+        </chn11>
+        <chn12>
+            <isRec>1</isRec>
+            <FrameRate>1</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+            <Mirror>0</Mirror>
+        </chn12>
+        <chn13>
+            <isRec>1</isRec>
+            <FrameRate>1</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+            <Mirror>0</Mirror>
+        </chn13>
+        <chn14>
+            <isRec>1</isRec>
+            <FrameRate>1</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+            <Mirror>0</Mirror>
+        </chn14>
+        <chn15>
+            <isRec>1</isRec>
+            <FrameRate>1</FrameRate>
+            <Resolution>1</Resolution>
+            <Quality>1</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+            <Mirror>0</Mirror>
+        </chn15>
+    </MainChn>
+    <SubChn>
+        <chn0>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn0>
+        <chn1>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn1>
+        <chn2>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn2>
+        <chn3>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn3>
+        <chn4>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn4>
+        <chn5>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn5>
+        <chn6>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn6>
+        <chn7>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn7>
+        <chn8>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn8>
+        <chn9>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn9>
+        <chn10>
+
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn10>
+        <chn11>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn11>
+        <chn12>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn12>
+        <chn13>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn13>
+        <chn14>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn14>
+        <chn15>
+            <isRec>1</isRec>
+            <FrameRate>10</FrameRate>
+            <Resolution>3</Resolution>
+            <Quality>2</Quality>
+            <HaveAudio>0</HaveAudio>
+            <Bitrate>1</Bitrate>
+            <PicLevel>1</PicLevel>
+            <Gop>1</Gop>
+        </chn15>
+    </SubChn>
+    <IPCChn>
+        <chn0>
+            <isOpen>0</isOpen>
+            <DevType>1</DevType>
+            <Protocol>1</Protocol>
+            <ChlNo>1</ChlNo>
+            <CameraPort>1</CameraPort>
+            <CameraIP>1</CameraIP>
+            <UserName>1</UserName>
+            <UserPwd>1</UserPwd>
+            <ipcAddr>1</ipcAddr>
+            <rtspUrl_0>1</rtspUrl_0>
+            <rtspUrl_1>1</rtspUrl_1>
+        </chn0>
+        <chn1>
+            <isOpen>0</isOpen>
+            <DevType>1</DevType>
+            <Protocol>1</Protocol>
+            <ChlNo>1</ChlNo>
+            <CameraPort>1</CameraPort>
+            <CameraIP>1</CameraIP>
+            <UserName>1</UserName>
+            <UserPwd>1</UserPwd>
+            <ipcAddr>1</ipcAddr>
+            <rtspUrl_0>1</rtspUrl_0>
+            <rtspUrl_1>1</rtspUrl_1>
+        </chn1>
+        <chn2>
+            <isOpen>0</isOpen>
+            <DevType>1</DevType>
+            <Protocol>1</Protocol>
+            <ChlNo>1</ChlNo>
+            <CameraPort>1</CameraPort>
+            <CameraIP>1</CameraIP>
+            <UserName>1</UserName>
+            <UserPwd>1</UserPwd>
+            <ipcAddr>1</ipcAddr>
+            <rtspUrl_0>1</rtspUrl_0>
+            <rtspUrl_1>1</rtspUrl_1>
+        </chn2>
+        <chn3>
+            <isOpen>0</isOpen>
+            <DevType>1</DevType>
+            <Protocol>1</Protocol>
+            <ChlNo>1</ChlNo>
+            <CameraPort>1</CameraPort>
+            <CameraIP>1</CameraIP>
+            <UserName>1</UserName>
+            <UserPwd>1</UserPwd>
+            <ipcAddr>1</ipcAddr>
+            <rtspUrl_0>1</rtspUrl_0>
+            <rtspUrl_1>1</rtspUrl_1>
+        </chn3>
+        <chn4>
+            <isOpen>1</isOpen>
+            <DevType>1</DevType>
+            <Protocol>1</Protocol>
+            <ChlNo>1</ChlNo>
+            <CameraPort>1</CameraPort>
+            <CameraIP>1</CameraIP>
+            <UserName>1</UserName>
+            <UserPwd>1</UserPwd>
+            <ipcAddr>1</ipcAddr>
+            <rtspUrl_0>1</rtspUrl_0>
+            <rtspUrl_1>1</rtspUrl_1>
+        </chn4>
+        <chn5>
+            <isOpen>1</isOpen>
+            <DevType>1</DevType>
+            <Protocol>1</Protocol>
+            <ChlNo>1</ChlNo>
+            <CameraPort>1</CameraPort>
+            <CameraIP>1</CameraIP>
+            <UserName>1</UserName>
+            <UserPwd>1</UserPwd>
+            <ipcAddr>1</ipcAddr>
+            <rtspUrl_0>1</rtspUrl_0>
+            <rtspUrl_1>1</rtspUrl_1>
+        </chn5>
+        <chn6>
+            <isOpen>1</isOpen>
+            <DevType>1</DevType>
+            <Protocol>1</Protocol>
+            <ChlNo>1</ChlNo>
+            <CameraPort>1</CameraPort>
+            <CameraIP>1</CameraIP>
+            <UserName>1</UserName>
+            <UserPwd>1</UserPwd>
+            <ipcAddr>1</ipcAddr>
+            <rtspUrl_0>1</rtspUrl_0>
+            <rtspUrl_1>1</rtspUrl_1>
+        </chn6>
+        <chn7>
+            <isOpen>1</isOpen>
+            <DevType>1</DevType>
+            <Protocol>1</Protocol>
+            <ChlNo>1</ChlNo>
+            <CameraPort>1</CameraPort>
+            <CameraIP>1</CameraIP>
+            <UserName>1</UserName>
+            <UserPwd>1</UserPwd>
+            <ipcAddr>1</ipcAddr>
+            <rtspUrl_0>1</rtspUrl_0>
+            <rtspUrl_1>1</rtspUrl_1>
+        </chn7>
+    </IPCChn>
+</RECORD>
+
+
+
+
+Localization
+
+
+1,分割线消失的慢，房间分割后，分割线没有消失，房间颜色没有显示，需要点一下撤销
+2,大区域，中间的房间会练成一片
+3，海尔200S+
+软件版本：IOS 1.0.07
+固件版本：H1.3.4.06.01R
+SN：J902FN000006XK5H0001
+时间：2019.05.19 09:16
+描述:app闪退
+4，房间分割，将app切到后台，过一会后切回去，房间前的勾选框消失
+5，合并房间后，再次点击完成APP会闪退
+
+:-1: Multiple commands produce '
+
+/Users/dingfude/Library/Developer/Xcode/DerivedData/EasyAudioDecoder-axcdaydbojzxtzgreidljtxagbxj/Build/Products/Debug-iphoneos/EasyAudioDecoder.framework/Info.plist':
+
+/Users/dingfude/OSChina/CaremaVideo/Test/EasyAudioDecoder-master/iOS/EasyAudioDecoder/Info.plist'
+/Users/dingfude/Library/Developer/Xcode/DerivedData/EasyAudioDecoder-axcdaydbojzxtzgreidljtxagbxj/Build/
+Products/Debug-iphoneos/EasyAudioDecoder.framework/Info.plist'
+
+2) Target 'EasyAudioDecoder' (project 'EasyAudioDecoder') has process command with output '/Users/dingfude/Library/Developer/Xcode/DerivedData/EasyAudioDecoder-axcdaydbojzxtzgreidljtxagbxj/Build/Products/Debug-iphoneos/EasyAudioDecoder.framework/Info.plist'
+
+
+shige2.g726
+
+//ffplay -f g726le  -ar 8000 -ac 1 -code_size 5 -i  shige2.g726
+
+ffplay -f g726  -ar 8000 -ac 1 -code_size 5 -i  shige2.g726
+
+
+
+如果是大端序就写  -f g726 
+如果不是40kbps的，比如是32kbps的就写 -code_size = 4  等等(取值是2~5)
+
+ffplay -ar 8000 -ac 1 -f g726le  -i out.g726
+
+
+我使用一个测试的g726能正常解码能播放，当时使用设备传输的并且减去海思头的g726不能播放
+
+
+
+/Applications/VLC.app/Contents/MacOS/VLC --demux=rawaud --rawaud-channels 1 --rawaud-samplerate 8000 /Users/dingfude/Desktop/audio_3.g726
+
+/Applications/VLC.app/Contents/MacOS/VLC --demux=rawaud --rawaud-channels 1 --rawaud-samplerate 8000 /Users/dingfude/Desktop/audio_3.g726
+
+/Applications/VLC.app/Contents/MacOS/VLC --demux=rawaud --rawaud-channels 1 --rawaud-samplerate 8000 /Users/dingfude/Desktop/音频/1_1558144267.pcm
+
+/Applications/VLC.app/Contents/MacOS/VLC --demux=rawaud --rawaud-channels 1 --rawaud-samplerate 8000 /Users/dingfude/Desktop/音频/test.pcm
+
+/Applications/VLC.app/Contents/MacOS/VLC --demux=rawaud --rawaud-channels 1 --rawaud-samplerate 8000 /Users/dingfude/Desktop/音频/singe2.g726
+
+dingfd1127@3irobotics.com
+123456
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
